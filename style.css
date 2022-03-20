@@ -2,18 +2,43 @@ body {
   background-image: linear-gradient(#615dad, #ffc8da);
   display: flex;
   justify-content: center;
+  padding: 5rem;
+}
+img {
+  border-radius: 15px 15px 0px 0px;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
+  font-size: 50px;
+  font-weight: 100;
+}
+p {
+  font-family: sans-serif;
+  font-size: 20px;
+  padding: 1rem;
+}
+
+button {
+  color: #ffffff;
+  padding: 2rem;
+  font-size: 20px;
+  border-style: none;
 }
 .nabidka {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 50%;
+  align-items: stretch;
+  text-align: center;
+  width: fit-content;
+  max-width: 70%;
+  min-width: auto;
+  height: fit-content;
+  max-height: 80%;
+  min-height: auto;
   background-color: #283e50;
   color: #ffffff;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .pravidla {
