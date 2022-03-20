@@ -1,0 +1,33 @@
+body {
+  background-image: linear-gradient(#615dad, #ffc8da);
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
+.nabidka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  background-color: #283e50;
+  color: #ffffff;
+}
+
+.pravidla {
+  background-color: #1fcca4;
+}
+
+.pravidla--active {
+  background-color: #1cbb96;
+}
+
+.zacit {
+  background-color: #0197f6;
+}
+
+.zacit--active {
+  background-color: #0090e9;
+}
