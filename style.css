@@ -19,12 +19,15 @@ p {
   padding: 1rem;
 }
 
-button {
+button,
+a {
   color: #ffffff;
   padding: 2rem;
   font-size: 20px;
   border-style: none;
+  text-decoration: none;
 }
+
 .nabidka {
   display: flex;
   flex-direction: column;
@@ -45,7 +48,7 @@ button {
   background-color: #1fcca4;
 }
 
-.pravidla--active {
+.pravidla:hover {
   background-color: #1cbb96;
 }
 
@@ -53,6 +56,6 @@ button {
   background-color: #0197f6;
 }
 
-.zacit--active {
+.zacit:hover {
   background-color: #0090e9;
 }
