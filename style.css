@@ -2,7 +2,8 @@ body {
   background-image: linear-gradient(#615dad, #ffc8da);
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
 }
 img {
   border-radius: 15px 15px 0px 0px;
@@ -34,14 +35,15 @@ a {
   align-items: stretch;
   text-align: center;
   width: fit-content;
-  max-width: 70%;
+  max-width: 50%;
   min-width: auto;
-  height: fit-content;
-  max-height: 80%;
+  height: auto;
+  max-height: 60%;
   min-height: auto;
   background-color: #283e50;
   color: #ffffff;
   border-radius: 15px 15px 0px 0px;
+  position: sticky;
 }
 
 .pravidla {
