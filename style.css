@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   background-image: linear-gradient(#615dad, #ffc8da);
   display: flex;
   justify-content: center;
@@ -7,6 +8,7 @@ body {
 }
 img {
   border-radius: 15px 15px 0px 0px;
+  max-width: 370px;
 }
 
 h1 {
@@ -16,37 +18,31 @@ h1 {
 }
 p {
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   padding: 1rem;
 }
 
 button,
 a {
   color: #ffffff;
-  padding: 2rem;
-  font-size: 20px;
+  padding: 1rem;
+  font-size: 15px;
   border-style: none;
   text-decoration: none;
 }
 
 .nabidka {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  display: block;
+  max-width: 370px;
   text-align: center;
-  width: fit-content;
-  max-width: 50%;
-  min-width: auto;
-  height: auto;
-  max-height: 60%;
-  min-height: auto;
   background-color: #283e50;
   color: #ffffff;
   border-radius: 15px 15px 0px 0px;
-  position: sticky;
 }
 
 .pravidla {
+  display: block;
+  width: 100%;
   background-color: #1fcca4;
 }
 
@@ -55,6 +51,8 @@ a {
 }
 
 .zacit {
+  display: block;
+  width: 100%;
   background-color: #0197f6;
 }
 
