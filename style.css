@@ -13,7 +13,7 @@ body {
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 7.5vw;
+  font-size: 50px;
   font-weight: 100;
   padding: 0.5rem;
   margin-bottom: 0%;
@@ -23,7 +23,6 @@ button,
 a {
   color: #ffffff;
   padding: 1rem;
-  font-size: 2vw;
   border-style: none;
   text-decoration: none;
 }
@@ -34,7 +33,6 @@ a {
   justify-content: space-between;
   width: 50%;
   height: max-content;
-  min-height: 80%;
   text-align: center;
   background-color: #283e50;
   color: #ffffff;
@@ -56,7 +54,6 @@ img {
   display: flex;
   flex-direction: column;
   font-family: sans-serif;
-  font-size: 2vw;
   padding: 1rem;
 }
 
@@ -85,7 +82,6 @@ img {
   text-align: left;
   padding: 1.5rem;
   font-family: sans-serif;
-  font-size: 1.5vw;
 }
 .img__svg {
   width: 1rem;
@@ -108,7 +104,6 @@ li {
   flex-direction: column;
   background-color: #283e50;
   font-style: italic;
-  font-size: 1.5vw;
 }
 
 figure img {
@@ -125,5 +120,9 @@ figure img {
   .img-fig {
     width: calc(100% / 2);
     justify-content: flex-start;
+  }
+
+  .nabidka__uvodni {
+    max-width: 30%;
   }
 }
