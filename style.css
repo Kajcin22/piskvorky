@@ -9,18 +9,13 @@ body {
   background-image: linear-gradient(#615dad, #ffc8da);
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
-  padding-bottom: 15rem;
-}
-img {
-  border-radius: 15px 15px 0px 0px;
-  max-width: 370px;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 50px;
   font-weight: 100;
+  padding: 0.5rem;
 }
 p {
   font-family: sans-serif;
@@ -38,17 +33,28 @@ a {
 }
 
 .nabidka {
-  display: block;
-  max-width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40%;
+  height: max-content;
   text-align: center;
   background-color: #283e50;
   color: #ffffff;
   border-radius: 15px 15px 0px 0px;
+  margin-top: 50px;
+}
+img {
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
 }
 
-.pravidla {
-  display: block;
+.buttons {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+}
+.pravidla {
   background-color: #1fcca4;
 }
 
@@ -57,11 +63,35 @@ a {
 }
 
 .zacit {
-  display: block;
-  width: 100%;
   background-color: #0197f6;
 }
 
 .zacit:hover {
   background-color: #0090e9;
+}
+
+.rules-descr__text {
+  text-align: left;
+  padding: 1.5rem;
+  font-family: sans-serif;
+}
+.img__svg {
+  width: 1rem;
+  filter: invert(1);
+}
+
+li {
+  padding: 0.5rem;
+}
+.rules-descr__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: sans-serif;
+}
+figure {
+  background-color: #283e50;
+  width: 100%;
+  font-style: italic;
 }
