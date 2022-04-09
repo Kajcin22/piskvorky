@@ -2,18 +2,18 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
-  margin: 0;
+  margin: 0%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: linear-gradient(#615dad, #ffc8da);
   display: flex;
   justify-content: center;
+  color: #ffffff;
 }
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 50px;
+  font-size: 5vw;
   font-weight: 100;
   padding: 0.5rem;
   margin-bottom: 0%;
@@ -21,13 +21,19 @@ h1 {
 
 button,
 a {
-  color: #ffffff;
   padding: 1rem;
   border-style: none;
   text-decoration: none;
+  font-size: 1vw;
+  margin: 0%;
+}
+
+button .zacit {
+  padding-bottom: 20%;
 }
 
 .nabidka {
+  /* možná předělat na block → půjde pak hodit img do classu v divu a nebudu to muset zvlášť nastavovat přímo u img*/
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,13 +41,13 @@ a {
   height: max-content;
   text-align: center;
   background-color: #283e50;
-  color: #ffffff;
+  font-size: 1vw;
   border-radius: 15px 15px 0px 0px;
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .img__uvodni {
-  display: flex;
   width: 100%;
 }
 
@@ -62,6 +68,7 @@ img {
   flex-direction: column;
   width: 100%;
 }
+
 .pravidla {
   background-color: #1fcca4;
 }
@@ -78,6 +85,8 @@ img {
   background-color: #0090e9;
 }
 
+/* ------------------          stránka Pravidla ------------------------------- */
+
 .rules-descr__text {
   text-align: left;
   padding: 1.5rem;
@@ -89,9 +98,6 @@ img {
   filter: invert(1);
 }
 
-li {
-  padding: 0.5rem;
-}
 .rules-descr__img {
   display: flex;
   flex-direction: column;
@@ -109,8 +115,15 @@ li {
 figure img {
   border-radius: 0px 0px 0px 0px;
 }
+/* ------------------          stránka Hra  ----------------------------------- */
 
-@media (min-width: 1350px) {
+.game-field {
+  opacity: 0.2;
+}
+
+/*------------------------------ breakpointy -----------------------------------*/
+
+@media (min-width: 800px) {
   .rules-descr__img {
     flex-direction: row;
     flex-wrap: wrap;
