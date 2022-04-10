@@ -13,7 +13,7 @@ body {
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 5vw;
+  font-size: 8vw;
   font-weight: 100;
   padding: 0.5rem;
   margin-bottom: 0%;
@@ -24,7 +24,8 @@ a {
   padding: 1rem;
   border-style: none;
   text-decoration: none;
-  font-size: 1vw;
+  font-size: 3vw;
+  color: #ffffff;
   margin: 0%;
 }
 
@@ -41,7 +42,7 @@ button .zacit {
   height: max-content;
   text-align: center;
   background-color: #283e50;
-  font-size: 1vw;
+  font-size: 3vw;
   border-radius: 15px 15px 0px 0px;
   margin-top: 50px;
   margin-bottom: 20px;
@@ -133,6 +134,15 @@ figure img {
   .img-fig {
     width: calc(100% / 2);
     justify-content: flex-start;
+  }
+  .nabidka,
+  button,
+  a {
+    font-size: 1vw;
+  }
+
+  h1 {
+    font-size: 5vw;
   }
 
   .nabidka__uvodni {
