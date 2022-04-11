@@ -131,13 +131,16 @@ figure img {
 /* ------------------          stránka Hra  ----------------------------------- */
 .game {
   display: block;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .game button {
   border: 2px solid #283e50;
   background-color: #c4a8f6;
-  width: 5vw;
-  height: 5vw;
+  width: 8vmin;
+  height: 8vmin;
 }
 
 .game button:hover {
@@ -145,7 +148,11 @@ figure img {
   cursor: pointer;
 }
 
-h2 img {
+.game h2 {
+  font-size: 3vw;
+}
+
+.game h2 img {
   width: 3vw;
   height: 3vw;
   filter: invert(1);
@@ -154,16 +161,19 @@ h2 img {
 .game-nav {
   display: flex;
   justify-content: space-between;
+  padding: 3vw;
 }
-
+.game-nav__turns {
+  align-items: center;
+}
 .game-nav__icons {
   display: flex;
 }
 
 #home-icon,
 #restart-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 3vw;
+  height: 3vw;
   padding: 10%;
   border-radius: 7px 7px 7px 7px;
 }
