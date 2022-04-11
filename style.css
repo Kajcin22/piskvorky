@@ -15,6 +15,7 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 8vw;
   font-weight: 100;
+  text-align: center;
   padding: 0.5rem;
   margin-bottom: 0%;
 }
@@ -31,6 +32,15 @@ a {
 
 button .zacit {
   padding-bottom: 20%;
+}
+
+ol {
+  margin: 0%;
+  padding: 2%;
+}
+
+li {
+  padding: 2%;
 }
 
 .nabidka {
@@ -76,6 +86,7 @@ img {
 
 .pravidla:hover {
   background-color: #1cbb96;
+  cursor: pointer;
 }
 
 .zacit {
@@ -84,6 +95,7 @@ img {
 
 .zacit:hover {
   background-color: #0090e9;
+  cursor: pointer;
 }
 
 /* ------------------          stránka Pravidla ------------------------------- */
@@ -117,9 +129,59 @@ figure img {
   border-radius: 0px 0px 0px 0px;
 }
 /* ------------------          stránka Hra  ----------------------------------- */
+.game {
+  display: block;
+}
 
-.game-field {
-  opacity: 0.2;
+.game button {
+  border: 2px solid #283e50;
+  background-color: #c4a8f6;
+  width: 5vw;
+  height: 5vw;
+}
+
+.game button:hover {
+  background-color: #cdbbec;
+  cursor: pointer;
+}
+
+h2 img {
+  width: 3vw;
+  height: 3vw;
+  filter: invert(1);
+}
+
+.game-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-nav__icons {
+  display: flex;
+}
+
+#home-icon,
+#restart-icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 10%;
+  border-radius: 7px 7px 7px 7px;
+}
+#home-icon {
+  background-color: #1fcca4;
+}
+
+#home-icon:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+
+#restart-icon {
+  background-color: #0197f6;
+}
+#restart-icon:hover {
+  background-color: #0090e9;
+  cursor: pointer;
 }
 
 /*------------------------------ breakpointy -----------------------------------*/
@@ -139,6 +201,13 @@ figure img {
   button,
   a {
     font-size: 1vw;
+  }
+
+  ol {
+    padding: 5%;
+  }
+  li {
+    padding: 1%;
   }
 
   h1 {
