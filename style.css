@@ -149,12 +149,12 @@ figure img {
 }
 
 .game h2 {
-  font-size: 3vw;
+  font-size: 20px;
 }
 
 .game h2 img {
-  width: 3vw;
-  height: 3vw;
+  width: 20px;
+  height: 20px;
   filter: invert(1);
 }
 
@@ -163,19 +163,17 @@ figure img {
   justify-content: space-between;
   padding: 3vw;
 }
-.game-nav__turns {
-  align-items: center;
-}
+
 .game-nav__icons {
   display: flex;
 }
 
 #home-icon,
 #restart-icon {
-  width: 3vw;
-  height: 3vw;
-  padding: 10%;
-  border-radius: 7px 7px 7px 7px;
+  width: 2em;
+  height: 2em;
+  padding: 0.5em;
+  border-radius: 7px;
 }
 #home-icon {
   background-color: #1fcca4;
