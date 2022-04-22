@@ -204,6 +204,16 @@ figure img {
 .game-field--cross {
   background-repeat: no-repeat;
   background-position: center;
+  animation: zoom 0.25s;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 0;
+  }
+  100% {
+    background-size: 75%;
+  }
 }
 
 /*------------------------------ breakpointy -----------------------------------*/

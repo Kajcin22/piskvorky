@@ -9,9 +9,11 @@ const tah = (event) => {
 
   if (player === 'circle') {
     policko.classList.add('game-field--circle');
+    policko.disabled = true;
     turn.src = 'cross.svg';
   } else if (player === 'cross') {
     policko.classList.add('game-field--cross');
+    policko.disabled = true;
     turn.src = 'circle.svg';
   }
 
