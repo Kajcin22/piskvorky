@@ -192,6 +192,20 @@ figure img {
   cursor: pointer;
 }
 
+.game-field--circle {
+  background-image: url('circle.svg');
+}
+
+.game-field--cross {
+  background-image: url('cross.svg');
+}
+
+.game-field--circle,
+.game-field--cross {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /*------------------------------ breakpointy -----------------------------------*/
 
 @media (min-width: 800px) {

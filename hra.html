@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" type="module"></script>
     <title>Hra - Piškvorky</title>
   </head>
   <body>
@@ -18,14 +19,14 @@
     <h1>Piškvorky</h1>
     <div class="game-nav">
       <div class="game-nav__turn">
-      <h2>HRAJE: <img src="circle.svg" alt="kruh"></h2>
+      <h2>HRAJE: <img id="turn" src="circle.svg" alt="kruh"></h2>
     </div>
         <div class="game-nav__icons">
         <a href="index.html"><img id="home-icon" src="home.svg" alt="home-icon"></a>
         <a href="hra.html"><img id="restart-icon" src="restart.svg" alt="restart-game"></a>
       </div>
     </div>
-  <div class="game-field">
+  <div class="game-field" id="gamefield">
     <div class="game-field__row">
     <button></button><button></button><button></button><button></button
     ><button></button><button></button><button></button><button></button
