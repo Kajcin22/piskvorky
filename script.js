@@ -16,12 +16,13 @@ const tah = (event) => {
     policko.disabled = true;
     turn.src = 'circle.svg';
   }
-
-  if (player === 'circle') {
+  /* if (player === 'circle') {
     player = 'cross';
   } else {
     player = 'circle';
-  }
+  } */
+  //toto zjednodušeně ("ternární operátor"):
+  player = player === 'circle' ? 'cross' : 'circle';
 };
 
 gameField.addEventListener('click', tah);
