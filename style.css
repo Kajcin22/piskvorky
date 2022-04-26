@@ -9,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   color: #ffffff;
+  font-family: sans-serif;
 }
 
 h1 {
@@ -27,11 +28,7 @@ a {
   text-decoration: none;
   font-size: 3vw;
   color: #ffffff;
-  margin: 0%;
-}
-
-button .zacit {
-  padding-bottom: 20%;
+  margin: none;
 }
 
 ol {
@@ -149,19 +146,19 @@ figure img {
 }
 
 .game h2 {
-  font-size: 20px;
+  font-size: 2.5vw;
 }
 
 .game h2 img {
-  width: 20px;
-  height: 20px;
+  width: 2.5vw;
+  height: 2.5vw;
   filter: invert(1);
 }
 
 .game-nav {
   display: flex;
   justify-content: space-between;
-  padding: 3vw;
+  align-items: baseline;
 }
 
 .game-nav__icons {
@@ -170,9 +167,7 @@ figure img {
 
 #home-icon,
 #restart-icon {
-  width: 2em;
-  height: 2em;
-  padding: 0.5em;
+  padding: 0.7em;
   border-radius: 7px;
 }
 #home-icon {
@@ -204,6 +199,7 @@ figure img {
 .game-field--cross {
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 75%;
   animation: zoom 0.25s;
 }
 
