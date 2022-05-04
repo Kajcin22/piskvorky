@@ -73,8 +73,12 @@ const isWinningMove = (field) => {
   const symbol = getSymbol(field);
 
   let i;
+  let c;
+  let r;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
+
+  /*------------- kontrola směrem doleva a doprava --------------------------------- */
   // Koukni doleva
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getField(origin.row, i - 1))) {
@@ -96,6 +100,7 @@ const isWinningMove = (field) => {
     return true;
   }
 
+  /* ------------------- kontrola směrem nahoru a dolů -------------------------- */
   let inColumn = 1;
   // Koukni nahoru
   i = origin.row;
@@ -114,7 +119,72 @@ const isWinningMove = (field) => {
     i++;
   }
 
+  //podmínka pro výhru:
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  /*--------------------- kontrola diagonálním směrem -------------------------- */
+
+  //první osa:
+  let inDiagonal1 = 1;
+
+  // Koukni vpravo nahoru
+  c = origin.column;
+  r = origin.row;
+  while (
+    c < boardSize - 1 &&
+    r > 0 &&
+    symbol === getSymbol(getField(r - 1, c + 1))
+  ) {
+    inDiagonal1++;
+    c++;
+    r--;
+  }
+
+  //Koukni vlevo dolu
+  c = origin.column;
+  r = origin.row;
+  while (
+    r < boardSize - 1 &&
+    c > 0 &&
+    symbol === getSymbol(getField(r + 1, c - 1))
+  ) {
+    inDiagonal1++;
+    c--;
+    r++;
+  }
+
+  if (inDiagonal1 >= symbolsToWin) {
+    return true;
+  }
+
+  //druhá osa:
+  let inDiagonal2 = 1;
+
+  //Koukni vpravo dolu
+  c = origin.column;
+  r = origin.row;
+  while (
+    c < boardSize - 1 &&
+    r < boardSize - 1 &&
+    symbol === getSymbol(getField(r + 1, c + 1))
+  ) {
+    inDiagonal2++;
+    c++;
+    r++;
+  }
+
+  //Koukni vlevo nahoru
+  c = origin.column;
+  r = origin.row;
+  while (c > 0 && r > 0 && symbol === getSymbol(getField(r - 1, c - 1))) {
+    inDiagonal2++;
+    c--;
+    r--;
+  }
+
+  if (inDiagonal2 >= symbolsToWin) {
     return true;
   }
 
@@ -122,67 +192,3 @@ const isWinningMove = (field) => {
 };
 
 gameField.addEventListener('click', tah);
-
-/*kód z prac skupinky:
-
-- měnili jsme textContent, ne obrázky
-
-import "./styles.css";
-
-let naTahu = "X";
-
-const handleClick = (event) => {
-  if (event.target.tagName !== "BUTTON") {
-    return;
-  }
-
-  if (
-    event.target.classList.contains("hrac-X") ||
-    event.target.classList.contains("hrac-O")
-  ) {
-    return;
-  }
-
-  event.target.classList.add(`hrac-${naTahu}`);
-  naTahu = naTahu === "X" ? "O" : "X";
-};
-
-const Tlacitko = () => {
-  return "<button></button>";
-};
-
-const RadekTlacitek = ({ pocetPolicek }) => {
-  let result = "<div>";
-  for (let i = 0; i < pocetPolicek; i++) {
-    result += Tlacitko();
-  }
-  result += "</div>";
-  return result;
-};
-
-const PoleTlacitek = ({ pocetPolicek }) => {
-  let result = "";
-  for (let i = 0; i < pocetPolicek; i++) {
-    result += RadekTlacitek({ pocetPolicek });
-  }
-  return result;
-};
-
-document.querySelector("#app").addEventListener("click", handleClick);
-document.querySelector("#app").innerHTML = PoleTlacitek({ pocetPolicek: 10 });
-
------------ event target na buttons přímo: ------------------------------
-
-const handleClickDisabled = (event) => {
-  event.target.disabled = true;
-  naTahu = naTahu === "X" ? "O" : "X";
-};
-
-- když je querySelectorAll, tak se pak cyklem projdou všechny zvolené elementy a přidá se na ně eventlistener:
-
-const tlacitka = document.querySelectorAll("button");
-for (let index = 0; index < tlacitka.length; index++) {
-  const tlacitko = tlacitka[index];
-  tlacitko.addEventListener("click", handleClick);
-}
-*/
